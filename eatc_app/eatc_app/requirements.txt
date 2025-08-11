@@ -4,4 +4,4 @@ lightgbm
 scikit-learn
 pathlib
 
-file_path = 'eatc_app/eatc_app/resources/styles/styles.css'
+file_path = os.path.join(cwd, "eatc_app/eatc_app/resources/styles/styles.css")
