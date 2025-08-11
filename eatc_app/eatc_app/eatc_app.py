@@ -271,15 +271,30 @@ with main_col3:
 
                     # if prediction = true (aka a bot)
                     if st.session_state.prediction_result == 1:
-                        img_col2.image("resources/images/bot_img.png", caption="Twitter Bot")
+                        bot_img_path = BASE_DIR / "resources" / "images" / "bot_img.png"
+                        img_col2.image(str(bot_img_path), caption="Twitter Bot")
                         st.markdown("#### This account has a high risk of being a Twitter Bot.")
-                        st.error('This account shows characteristics of automated behavior. We ' \
-                        'recommend exercising caution when engaging with this account.', icon="⚠️")
+                        st.error(
+                            "This account shows characteristics of automated behavior. "
+                            "We recommend exercising caution when engaging with this account.",
+                            icon="⚠️"
+                        )
+                        
                     # if prediction = false (aka a human)
                     else: 
+                        human_img_path = BASE_DIR / "resources" / "images" / "human_img.png"
+                        img_col2.image(str(human_img_path), caption="Human User")
+                        st.markdown("#### This account has a low risk of being a Twitter Bot.")
+                        st.info(
+                            "The result is not 100 percent accurate so exercising caution is still recommended.",
+                            
                         img_col2.image("resources/images/human_img.png", caption="Human User")
                         st.markdown("#### This account has a low risk of being a Twitter Bot.")
-                        st.info('The result is not 100 percent accurate so exercising caution is still recommended.', icon="ℹ️")
+                        st.info('The result is not 100 percent accurate so exercising caution is still recommended.',
+                                icon="ℹ️"
+                        )
+
+
         # else, if there isn't any user input
         else:
             img_col1, img_col2, img_col3 = st.columns([1,2,1])
@@ -297,6 +312,7 @@ with st.container(key="footer"):
                     
 
             
+
 
 
 
