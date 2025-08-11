@@ -1,0 +1,98 @@
+/* === MAIN CONTAINER === */
+/* Force the main container to occupy the full available width */
+.stMainBlockContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* === HEADER === */
+/* Stretch the header across the full viewport width & Style the header */
+.st-key-header {
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 3% 0 2% 0 !important; /* top right bottom left */
+    background-color: rgb(53, 137, 255);
+    color: azure;
+    text-align: center;
+}
+
+/* Center the header text and description */
+.st-key-header h1, .st-key-header p {
+    text-align: center;
+}
+
+/* === BODY === */
+/* Add vertical margin to the form and results */
+.st-key-body {
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+}
+
+/* === FORM === */
+/* Limit form width to 90% of its parent container */
+.stForm {
+    width: 90%;
+}
+
+/* Add vertical padding to all form container divs */
+.stForm div {
+    padding: 0.1% 0;
+}
+
+/* Remove vertical padding for form headings and descriptions */
+.stForm h3, .stForm p {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Add horizontal padding to form content area (inputs and buttons) */
+.st-key-form_content {
+    padding: 0% 0.5%;
+}
+
+/* Style the submit button */
+.stFormSubmitButton button {
+    background-color: rgb(53, 137, 255) !important;
+    color: azure !important;
+    border-color: rgb(53, 137, 255) !important;
+}
+
+/* Style the submit button on hover and focus */
+.stFormSubmitButton button:hover,
+.stFormSubmitButton button:focus {
+    background-color: transparent !important;
+    color: rgb(53, 137, 255) !important;
+    border-color: rgb(53, 137, 255) !important;
+}
+
+/* === DISPLAY RESULT BOX === */
+/* Add left margin to the result box */
+.st-key-result_box {
+    margin-left: 5%;
+}
+
+/* Center result box heading text */
+.st-key-result_box h4 {
+    text-align: center;
+}
+
+/* === FOOTER === */
+/* Center the footer text */
+.st-key-footer {
+    text-align: center;
+}
+
+/* Reduce top and bottom margin for the footer divider line */
+.st-key-footer hr {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Add spacing between the bottom of the page and the footer text */
+.st-key-footer p {
+    margin-bottom: 2%;
+}
+
+
