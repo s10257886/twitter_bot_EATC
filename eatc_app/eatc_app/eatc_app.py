@@ -283,7 +283,10 @@ with main_col3:
         # else, if there isn't any user input
         else:
             img_col1, img_col2, img_col3 = st.columns([1,2,1])
-            img_col2.image("resources/images/bored_bot.png", caption="I'm bored. Anything to analyze?")
+            # Construct image path relative to the script
+            bored_bot_path = BASE_DIR / "resources" / "images" / "bored_bot.png"
+            # Load the image using the corrected path
+            img_col2.image(str(bored_bot_path), caption="I'm bored. Anything to analyze?")
 
 ### Website Footer ###
 with st.container(key="footer"):
@@ -294,6 +297,7 @@ with st.container(key="footer"):
                     
 
             
+
 
 
 
