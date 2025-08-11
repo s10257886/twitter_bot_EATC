@@ -3,3 +3,5 @@ joblib
 lightgbm
 scikit-learn
 pathlib
+
+file_path = 'eatc_app/eatc_app/resources/styles/styles.css'
