@@ -144,21 +144,38 @@ def log(msg):
 
 ''' MAIN CODE '''
 ### Load the external CSS ###
-css_path = pathlib.Path("resources/styles/styles.css")
+BASE_DIR = pathlib.Path(__file__).parent.resolve()
+
+### Load the external CSS ###
+css_path = BASE_DIR / "resources" / "styles" / "styles.css"
 load_css(css_path)
 
 ### Import our trained model ###
-loaded_model = joblib.load('model.joblib')
+model_path = BASE_DIR / "model.joblib"
+loaded_model = joblib.load(model_path)
 
 ### Logo ###
-sidebar_logo = "resources/images/hori_logo.png"
-main_body_logo = "resources/images/hori_logo.png"
-st.logo(sidebar_logo, icon_image=main_body_logo, size="large") # side bar logo, icon_image= main body logo
+sidebar_logo = BASE_DIR / "resources" / "images" / "hori_logo.png"
+main_body_logo = BASE_DIR / "resources" / "images" / "hori_logo.png"
+st.logo(str(sidebar_logo), icon_image=str(main_body_logo), size="large")  # Convert to str for Streamlit
+
+
+
+#css_path = pathlib.Path("resources/styles/styles.css")
+#load_css(css_path)
+
+### Import our trained model ###
+#loaded_model = joblib.load('model.joblib')
+
+### Logo ###
+#sidebar_logo = "resources/images/hori_logo.png"
+#main_body_logo = "resources/images/hori_logo.png"
+#st.logo(sidebar_logo, icon_image=main_body_logo, size="large") # side bar logo, icon_image= main body logo
 
 ### Website Header ###
-with st.container(key="header"):
-    st.title("Detect Twitter Bots with AI Precision")
-    st.write("Advanced machine learning algorithm to identify automated accounts and protect your social media presence")
+#with st.container(key="header"):
+ #   st.title("Detect Twitter Bots with AI Precision")
+  #  st.write("Advanced machine learning algorithm to identify automated accounts and protect your social media presence")
 
 ### Website Body ###
 body = st.container(key="body")
@@ -277,6 +294,7 @@ with st.container(key="footer"):
                     
 
             
+
 
 
 
