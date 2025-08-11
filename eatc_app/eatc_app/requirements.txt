@@ -2,5 +2,4 @@ streamlit
 joblib
 lightgbm
 scikit-learn
-pathlib
-os
+
