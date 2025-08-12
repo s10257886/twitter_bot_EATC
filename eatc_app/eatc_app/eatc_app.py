@@ -193,7 +193,7 @@ with main_col2:
             mention_count = mention_col.number_input("Mention Count:", min_value=0, help="number of mentions in the tweet (eg @username)", key="mention_input")
             follower_count = follower_col.number_input("Follower Count:", min_value=0, help="number of follower the user has", key="follower_input")
 
-            hashtags = st.text_input('Hashtags:', placeholder="Enter none or hashtags (space/,/; separated)", key="hashtag_input")
+            hashtags = st.text_input('Hashtags:', placeholder="Enter none or hashtags (comma, space, semicolon separated)", key="hashtag_input")
             
             submit_button = st.form_submit_button(label='Start Analysis', use_container_width=True)
             
