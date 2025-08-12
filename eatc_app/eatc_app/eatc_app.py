@@ -137,7 +137,7 @@ def load_css(file_path):
     with open(file_path) as f:
         st.html(f"<style>{f.read()}</style>")
 
-# Logging
+# Logging - for testing
 def log(msg):
     with open("log.txt", "w") as file:
         file.write(msg)
@@ -159,23 +159,10 @@ sidebar_logo = BASE_DIR / "resources" / "images" / "hori_logo.png"
 main_body_logo = BASE_DIR / "resources" / "images" / "hori_logo.png"
 st.logo(str(sidebar_logo), icon_image=str(main_body_logo), size="large")  # Convert to str for Streamlit
 
-
-
-#css_path = pathlib.Path("resources/styles/styles.css")
-#load_css(css_path)
-
-### Import our trained model ###
-#loaded_model = joblib.load('model.joblib')
-
-### Logo ###
-#sidebar_logo = "resources/images/hori_logo.png"
-#main_body_logo = "resources/images/hori_logo.png"
-#st.logo(sidebar_logo, icon_image=main_body_logo, size="large") # side bar logo, icon_image= main body logo
-
 ### Website Header ###
-#with st.container(key="header"):
- #   st.title("Detect Twitter Bots with AI Precision")
-  #  st.write("Advanced machine learning algorithm to identify automated accounts and protect your social media presence")
+with st.container(key="header"):
+    st.title("Detect Twitter Bots with AI Precision")
+    st.write("Advanced machine learning algorithm to identify automated accounts and protect your social media presence")
 
 ### Website Body ###
 body = st.container(key="body")
@@ -259,7 +246,7 @@ with main_col3:
                 # Predict using our trained model and save in user session
                 pred = loaded_model.predict(df_processed)
                 st.session_state.prediction_result = pred
-                log("prediction:" + str(pred)) # logging
+                #log("prediction:" + str(pred)) # logging
 
             # Display results
             with st.container(key="display_result"):
