@@ -273,13 +273,7 @@ with main_col3:
                         img_col2.image(str(human_img_path), caption="Human User")
                         st.markdown("#### This account has a low risk of being a Twitter Bot.")
                         st.info(
-                            "The result is not 100 percent accurate so exercising caution is still recommended.",
-                        )
-                            
-                        img_col2.image("resources/images/human_img.png", caption="Human User")
-                        st.markdown("#### This account has a low risk of being a Twitter Bot.")
-                        st.info('The result is not 100 percent accurate so exercising caution is still recommended.',
-                                icon="ℹ️"
+                            "The result is not 100 percent accurate so exercising caution is still recommended.", icon="ℹ️"
                         )
 
 
@@ -300,6 +294,7 @@ with st.container(key="footer"):
                     
 
             
+
 
 
 
